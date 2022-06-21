@@ -25,7 +25,7 @@ function showWeather(data) {
     const weather = document.querySelector('.weather');
     const hilow = document.querySelector('.hi-low');
 
-    city.textContent = data.name;
+    city.textContent = `${data.name}, ${data.sys.country}`;
     date.textContent = getFormattedDate(data.dt);
     temp.innerHTML = `${data.main.temp}<span>°c</span>`;
     weather.textContent = data.weather[0].main;
